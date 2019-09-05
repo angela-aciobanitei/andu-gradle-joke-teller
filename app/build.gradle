@@ -52,7 +52,7 @@ dependencies {
     implementation 'com.google.code.findbugs:jsr305:3.0.2'
 
     // Mobile Ads
-    implementation 'com.google.android.gms:play-services-ads:11.8.0'
+    implementation 'com.google.android.gms:play-services-ads:18.2.0'
 
     // Unit tests
     testImplementation 'junit:junit:4.12'
