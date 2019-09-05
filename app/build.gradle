@@ -1,4 +1,5 @@
 apply plugin: 'com.android.application'
+// Apply the Endpoints Framework Gradle Plugin after the android plugin
 apply plugin: 'com.google.cloud.tools.endpoints-framework-client'
 
 buildscript {
@@ -6,18 +7,20 @@ buildscript {
         jcenter()
     }
     dependencies {
-        classpath 'com.google.cloud.tools:endpoints-framework-gradle-plugin:1.0.2'
+        // The Endpoints Framework Gradle Plugin JAR
+        // See: https://github.com/GoogleCloudPlatform/endpoints-framework-gradle-plugin
+        classpath 'com.google.cloud.tools:endpoints-framework-gradle-plugin:1.0.3'
     }
 }
 
 android {
-    compileSdkVersion 26
-    buildToolsVersion "26.0.3"
+    compileSdkVersion 28
+    buildToolsVersion "28.0.3"
 
     defaultConfig {
         applicationId "com.udacity.gradle.builditbigger"
         minSdkVersion 16
-        targetSdkVersion 26
+        targetSdkVersion 28
         versionCode 1
         versionName "1.0"
         multiDexEnabled true
@@ -35,16 +38,45 @@ android {
 
 dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
-    endpointsServer project(path: ':backend', configuration: 'endpoints')
-    implementation 'com.android.support:appcompat-v7:26.1.0'
-    implementation 'com.google.android.gms:play-services-ads:11.8.0'
-    implementation 'com.google.api-client:google-api-client:1.23.0'
-    implementation 'com.google.http-client:google-http-client-android:1.23.0'
-    implementation 'com.google.code.findbugs:jsr305:3.0.1'
 
+    // Android Support Library
+    implementation 'com.android.support:appcompat-v7:28.0.0'
+
+    // Google APIs Client Library For Java
+    implementation 'com.google.api-client:google-api-client:1.23.0'
+
+    // Google HTTP Client Library for Java.
+    implementation 'com.google.http-client:google-http-client-android:1.23.0'
+
+    // JSR305 Annotations for Findbugs
+    implementation 'com.google.code.findbugs:jsr305:3.0.2'
+
+    // Mobile Ads
+    implementation 'com.google.android.gms:play-services-ads:11.8.0'
+
+    // Unit tests
+    testImplementation 'junit:junit:4.12'
+
+    // Instrumentation tests
     androidTestImplementation('com.android.support.test.espresso:espresso-core:2.2.2', {
         exclude group: 'com.android.support', module: 'support-annotations'
     })
 
-    testImplementation 'junit:junit:4.12'
+    // The dependency on server module in project (backend)
+    endpointsServer project(path: ':backend', configuration: 'endpoints')
+
+}
+
+// Fix error: All com.android.support libraries must use the exact same version specification
+// See: https://stackoverflow.com/questions/42374151/all-com-android-support-libraries-must-use-the-exact-same-version-specification
+configurations.all {
+    resolutionStrategy.eachDependency { DependencyResolveDetails details ->
+        def requested = details.requested
+        if (requested.group == 'com.android.support') {
+            if (!requested.name.startsWith("multidex")) {
+                details.useVersion '28.0.0'
+            }
+        }
+
+    }
 }
