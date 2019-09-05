@@ -39,16 +39,16 @@ android {
 dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
 
-    // Android Support Library
-    implementation 'androidx.appcompat:appcompat:1.0.0'
+    // AndroidX
+    implementation 'androidx.appcompat:appcompat:1.0.2'
 
-    // Google APIs Client Library For Java
+    // Google APIs Client Library for Java
     implementation 'com.google.api-client:google-api-client:1.23.0'
 
     // Google HTTP Client Library for Java.
     implementation 'com.google.http-client:google-http-client-android:1.23.0'
 
-    // JSR305 Annotations for Findbugs
+    // Annotations for Findbugs
     implementation 'com.google.code.findbugs:jsr305:3.0.2'
 
     // Mobile Ads
@@ -64,4 +64,7 @@ dependencies {
 
     // The dependency on server module in project (backend)
     endpointsServer project(path: ':backend', configuration: 'endpoints')
+
+    // The dependency on the Java library module
+    implementation project(path: ':jokeTeller')
 }
