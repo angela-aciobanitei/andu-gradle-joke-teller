@@ -161,5 +161,7 @@
     <orderEntry type="library" name="Gradle: com.google.android.gms:play-services-ads-base:18.2.0@aar" level="project" />
     <orderEntry type="module" module-name="displayjoke" />
     <orderEntry type="module" module-name="jokeTeller" />
+    <orderEntry type="module" module-name="displayjoke" />
+    <orderEntry type="module" module-name="jokeTeller" />
   </component>
 </module>
