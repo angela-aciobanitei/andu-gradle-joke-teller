@@ -34,6 +34,31 @@ android {
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
     }
+
+    /**
+     * To create product flavors you need to add them to the productFlavors{} block
+     * in your build configuration and include the settings you want. Note: all flavors
+     * must belong to a named flavor dimension, which is a group of product flavors.
+     * You must assign all flavors to a flavor dimension; otherwise, you will get this
+     * build error: "Error: All flavors must now belong to a named flavor dimension.
+     * The flavor 'flavor_name' is not assigned to a flavor dimension." If a given
+     * module specifies only one flavor dimension, Gradle automatically assigns all
+     * of the module's flavors to that dimension.
+     * See: https://developer.android.com/studio/build/build-variants#product-flavors
+     */
+    flavorDimensions 'version'
+    productFlavors {
+        free {
+            dimension 'version'
+            versionNameSuffix '-free'
+            applicationIdSuffix = '.free'
+        }
+        paid {
+            dimension 'version'
+            versionNameSuffix '-paid'
+            applicationIdSuffix = '.paid'
+        }
+    }
 }
 
 dependencies {
@@ -51,8 +76,8 @@ dependencies {
     // Annotations for Findbugs
     implementation 'com.google.code.findbugs:jsr305:3.0.2'
 
-    // Mobile Ads
-    implementation 'com.google.android.gms:play-services-ads:18.2.0'
+    // Mobile Ads available only for free product flavor
+    freeImplementation 'com.google.android.gms:play-services-ads:18.2.0'
 
     // Local unit tests (JUnit 4 framework)
     testImplementation 'junit:junit:4.12'
