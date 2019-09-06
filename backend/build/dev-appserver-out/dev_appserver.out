@@ -1,21 +1,28 @@
-Sep 06, 2019 12:35:03 PM com.google.appengine.tools.development.SystemPropertiesManager setSystemProperties
+Sep 06, 2019 3:40:58 PM com.google.appengine.tools.development.SystemPropertiesManager setSystemProperties
 INFO: Overwriting system property key 'java.util.logging.config.file', value 'C:\Users\aciob\AppData\Local\Google\Cloud SDK\google-cloud-sdk\platform\google_appengine\google\appengine\tools\java\config\sdk\logging.properties' with value 'WEB-INF/logging.properties' from 'D:\STUDIO_ANDU\GradleJokes\backend\build\exploded-backend\WEB-INF\appengine-web.xml'
-2019-09-06 12:35:03.509:INFO::main: Logging initialized @612ms to org.eclipse.jetty.util.log.StdErrLog
-2019-09-06 12:35:03.565:WARN:oejs.AbstractConnector:main: Ignoring deprecated socket close linger time
-Sep 06, 2019 11:35:03 AM com.google.appengine.tools.development.IsolatedAppClassLoader checkWorkingDirectory
-WARNING: Your working directory, (D:\STUDIO_ANDU\GradleJokes\backend) is not equal to your 
+2019-09-06 15:40:58.781:INFO::main: Logging initialized @604ms to org.eclipse.jetty.util.log.StdErrLog
+2019-09-06 15:40:58.843:WARN:oejs.AbstractConnector:main: Ignoring deprecated socket close linger time
+Sep 06, 2019 2:40:59 PM com.google.appengine.tools.development.IsolatedAppClassLoader checkWorkingDirectory
+WARNING: Your working directory, (D:\STUDIO_ANDU\GradleJokes) is not equal to your 
 web application root (D:\STUDIO_ANDU\GradleJokes\backend\build\exploded-backend)
 You will not be able to access files from your working directory on the production server.
 
-2019-09-06 12:35:03.898:INFO:oejs.Server:main: jetty-9.4.18.v20190429; built: 2019-04-29T20:42:08.989Z; git: e1bc35120a6617ee3df052294e433f3a25ce7097; jvm 1.8.0_212-b10
-2019-09-06 12:35:04.487:INFO:oejsh.ContextHandler:main: Started c.g.a.t.d.j.DevAppEngineWebAppContext@792b749c{/,file:///D:/STUDIO_ANDU/GradleJokes/backend/build/exploded-backend/,AVAILABLE}{D:\STUDIO_ANDU\GradleJokes\backend\build\exploded-backend}
-2019-09-06 12:35:04.488:INFO:oejs.session:main: DefaultSessionIdManager workerName=node0
-2019-09-06 12:35:04.488:INFO:oejs.session:main: node0 Scavenging disabled
-2019-09-06 12:35:04.514:INFO:oejs.AbstractConnector:main: Started NetworkTrafficSelectChannelConnector@4e9ba398{HTTP/1.1,[http/1.1]}{localhost:8080}
-2019-09-06 12:35:04.515:INFO:oejs.Server:main: Started @1618ms
-Sep 06, 2019 11:35:04 AM com.google.appengine.tools.development.AbstractModule startup
+2019-09-06 15:40:59.215:INFO:oejs.Server:main: jetty-9.4.18.v20190429; built: 2019-04-29T20:42:08.989Z; git: e1bc35120a6617ee3df052294e433f3a25ce7097; jvm 1.8.0_212-b10
+2019-09-06 15:40:59.821:INFO:oejsh.ContextHandler:main: Started c.g.a.t.d.j.DevAppEngineWebAppContext@792b749c{/,file:///D:/STUDIO_ANDU/GradleJokes/backend/build/exploded-backend/,AVAILABLE}{D:\STUDIO_ANDU\GradleJokes\backend\build\exploded-backend}
+2019-09-06 15:40:59.822:INFO:oejs.session:main: DefaultSessionIdManager workerName=node0
+2019-09-06 15:40:59.822:INFO:oejs.session:main: node0 Scavenging disabled
+2019-09-06 15:40:59.849:INFO:oejs.AbstractConnector:main: Started NetworkTrafficSelectChannelConnector@4e9ba398{HTTP/1.1,[http/1.1]}{localhost:8080}
+2019-09-06 15:40:59.850:INFO:oejs.Server:main: Started @1673ms
+Sep 06, 2019 2:40:59 PM com.google.appengine.tools.development.AbstractModule startup
 INFO: Module instance default is running at http://localhost:8080/
-Sep 06, 2019 11:35:04 AM com.google.appengine.tools.development.AbstractModule startup
+Sep 06, 2019 2:40:59 PM com.google.appengine.tools.development.AbstractModule startup
 INFO: The admin console is running at http://localhost:8080/_ah/admin
-Sep 06, 2019 12:35:04 PM com.google.appengine.tools.development.DevAppServerImpl doStart
+Sep 06, 2019 3:40:59 PM com.google.appengine.tools.development.DevAppServerImpl doStart
 INFO: Dev App Server is now running
+2019-09-06 15:41:08.412:INFO:oejs.AbstractConnector:pool-1-thread-1: Stopped NetworkTrafficSelectChannelConnector@4e9ba398{HTTP/1.1,[http/1.1]}{localhost:8080}
+2019-09-06 15:41:08.424:INFO:oejsh.ContextHandler:pool-1-thread-1: Stopped c.g.a.t.d.j.DevAppEngineWebAppContext@792b749c{/,file:///D:/STUDIO_ANDU/GradleJokes/backend/build/exploded-backend/,UNAVAILABLE}{D:\STUDIO_ANDU\GradleJokes\backend\build\exploded-backend}
+Sep 06, 2019 3:41:08 PM com.google.appengine.tools.development.AbstractModule shutdown
+INFO: Shutting down module instance default
+Shutting down.
+Sep 06, 2019 3:41:08 PM com.google.appengine.api.datastore.dev.LocalDatastoreService cleanupActiveServices
+INFO: scheduler shutting down.
