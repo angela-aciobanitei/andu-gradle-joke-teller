@@ -45,4 +45,7 @@ dependencies {
 
     // Google HTTP Client Library for Java.
     implementation 'com.google.http-client:google-http-client-android:1.23.0'
+
+    // The dependency on the Java library module
+    implementation project(path: ':jokeTeller')
 }
