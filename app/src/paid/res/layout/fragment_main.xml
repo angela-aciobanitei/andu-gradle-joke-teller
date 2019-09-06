@@ -11,6 +11,4 @@
 
     <include layout="@layout/content_tell_joke"/>
 
-    <include layout="@layout/content_ad_banner"/>
-
 </RelativeLayout>

@@ -2,22 +2,20 @@ package com.udacity.gradle.builditbigger;
 
 import android.content.Intent;
 import android.os.Bundle;
-import androidx.fragment.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.ProgressBar;
 
-import com.ang.acb.displayjoke.DisplayJokeActivity;
-import com.ang.acb.joketeller.JokeTeller;
-import com.google.android.gms.ads.AdRequest;
-import com.google.android.gms.ads.AdView;
+import androidx.fragment.app.Fragment;
 
-public class ActivityFragment extends Fragment implements JokeLoadedCallback {
+import com.ang.acb.displayjoke.DisplayJokeActivity;
+
+public class MainActivityFragment extends Fragment implements JokeLoadedCallback {
 
     // Required public empty constructor
-    public ActivityFragment() {}
+    public MainActivityFragment() {}
 
     private Button tellJokeButton;
     private ProgressBar loadingIndicator;
@@ -74,3 +72,4 @@ public class ActivityFragment extends Fragment implements JokeLoadedCallback {
         startActivity(intent);
     }
 }
+
