@@ -7,16 +7,16 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
-import android.widget.Toast;
 
 import com.ang.acb.displayjoke.DisplayJokeActivity;
 import com.ang.acb.joketeller.JokeTeller;
 import com.google.android.gms.ads.AdRequest;
 import com.google.android.gms.ads.AdView;
 
-public class MainActivityFragment extends Fragment {
+public class MainActivityFragment extends Fragment implements JokeLoadedCallback {
 
     public MainActivityFragment() {}
+    String joke;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -45,19 +45,37 @@ public class MainActivityFragment extends Fragment {
         button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                loadJoke();
                 launchJokeActivity();
             }
         });
     }
 
-    private String getJoke(){
+    private void loadJavaLibJoke(){
         JokeTeller jokeTeller = new JokeTeller();
-        return jokeTeller.tellJoke();
+        setJoke(jokeTeller.tellJoke());
+    }
+
+    private void loadJoke(){
+        new EndpointsAsyncTask(this).execute();
     }
 
     private void launchJokeActivity() {
         Intent intent = new Intent(getContext(), DisplayJokeActivity.class);
         intent.putExtra(getString(R.string.extra_joke), getJoke());
         startActivity(intent);
+    }
+
+    private String getJoke(){
+        return joke;
+    }
+
+    public void setJoke(String joke) {
+        this.joke = joke;
+    }
+
+    @Override
+    public void onJokeLoaded(String joke) {
+        setJoke(joke);
     }
 }
