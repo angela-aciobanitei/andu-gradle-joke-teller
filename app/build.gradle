@@ -67,4 +67,7 @@ dependencies {
 
     // The dependency on the Java library module
     implementation project(path: ':jokeTeller')
+
+    // The dependency on the Android library module
+    implementation project(path: ':displayjoke')
 }
