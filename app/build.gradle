@@ -54,15 +54,18 @@ dependencies {
     // Mobile Ads
     implementation 'com.google.android.gms:play-services-ads:18.2.0'
 
-    // Unit tests
+    // Local unit tests (JUnit 4 framework)
     testImplementation 'junit:junit:4.12'
 
-    // Instrumentation tests
+    // Instrumented tests (AndroidJUnitRunner, JUnit Rules, AndroidJUnit4)
+    androidTestImplementation 'androidx.test:runner:1.2.0'
+    androidTestImplementation 'androidx.test:rules:1.2.0'
+    androidTestImplementation 'androidx.test.ext:junit:1.1.1'
     androidTestImplementation('androidx.test.espresso:espresso-core:3.1.0', {
         exclude group: 'com.android.support', module: 'support-annotations'
     })
 
-    // The dependency on server module in project (backend)
+    // The dependency on the GCE (Google Cloud Endpoints) module (backend)
     endpointsServer project(path: ':backend', configuration: 'endpoints')
 
     // The dependency on the Java library module
