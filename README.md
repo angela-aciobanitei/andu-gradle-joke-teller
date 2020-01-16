@@ -69,11 +69,11 @@ You do not need to follow the rest of steps in the migration guide, only the Set
 
 Start or stop your local server by using the gradle tasks as shown in the following screenshot:
 
-<img src="GCE-server-gradle-tasks.png" height="450">
+<img src="/screenshots/GCE-server-gradle-tasks.png" height="450">
 
 Once your local GCE server is started you should see the following at [localhost:8080](http://localhost:8080)
 
-<img src="https://raw.githubusercontent.com/GoogleCloudPlatform/gradle-appengine-templates/77e9910911d5412e5efede5fa681ec105a0f02ad/doc/img/devappserver-endpoints.png">
+<img src="/screenshots/localhost_800.png" height="450">
 
 Now you are ready to continue! 
 
