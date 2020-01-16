@@ -7,7 +7,7 @@ buildscript {
         // Needed for the Endpoints Framework Gradle Plugin V2
         classpath 'com.google.guava:guava:24.1-jre'
         // The Android Gradle plugin
-        classpath 'com.android.tools.build:gradle:3.5.0'
+        classpath 'com.android.tools.build:gradle:3.5.3'
     }
 }
 
