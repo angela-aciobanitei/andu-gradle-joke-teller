@@ -16,14 +16,14 @@ flavors allow for much bigger projects with minimal added complexity.
 
 ## What Will I Learn?
 
-* Add free and paid flavors to an app, and set up your build to share code between them
-* Factor reusable functionality into a Java library
-* Factor reusable Android functionality into an Android library
-* Configure a multi project build to compile your libraries and app
-* Use the Gradle App Engine plugin to deploy a backend
-* Configure an integration test suite that runs against the local App Engine development server
+*   Add free and paid flavors to an app, and set up your build to share code between them
+*   Factor reusable functionality into a Java library
+*   Factor reusable Android functionality into an Android library
+*   Configure a multi project build to compile your libraries and app
+*   Use the Gradle App Engine plugin to deploy a backend
+*   Configure an integration test suite that runs against the local App Engine development server
 
-## How Do I Complete this Project?
+## How to Complete this Project
 
 ### Step 0: Starting Point
 
@@ -85,7 +85,6 @@ Create an AsyncTask to retrieve jokes using the template included int these
 Make the button kick off a task to retrieve a joke, then launch the activity from your 
 Android Library to display it.
 
-
 ### Step 4: Add Functional Tests
 
 Add code to test that your Async task successfully retrieves a non-empty string. 
@@ -120,24 +119,24 @@ To tie it all together, create a Gradle task that:
 
 ### Required Components
 
-* Project contains a Java library for supplying jokes
-* Project contains an Android library with an activity that displays jokes passed to it as intent extras.
-* Project contains a Google Cloud Endpoints module that supplies jokes from the Java library. 
-* Project loads jokes from GCE module via an async task.
-* Project contains connected tests to verify that the async task is indeed loading jokes.
-* Project contains paid/free flavors. The paid flavor has no ads, and no unnecessary dependencies.
+*   Project contains a Java library for supplying jokes
+*   Project contains an Android library with an activity that displays jokes passed to it as intent extras.
+*   Project contains a Google Cloud Endpoints module that supplies jokes from the Java library. 
+*   Project loads jokes from GCE module via an async task.
+*   Project contains connected tests to verify that the async task is indeed loading jokes.
+*   Project contains paid/free flavors. The paid flavor has no ads, and no unnecessary dependencies.
 
 ### Required Behavior
 
-* App retrieves jokes from Google Cloud Endpoints module and displays them via an Activity from the Android Library.
+*   App retrieves jokes from Google Cloud Endpoints module and displays them via an Activity from the Android Library.
 
 ### Optional Components
 
 Once you have a functioning project, consider adding more features to test your Gradle and Android skills. Here are a few suggestions:
 
-* Make the free app variant display interstitial ads between the main activity and the joke-displaying activity.
-* Have the app display a loading indicator while the joke is being fetched from the server.
-* Write a Gradle task that starts the GCE dev server, runs all the Android tests, and shuts down the dev server.
+*   Make the free app variant display interstitial ads between the main activity and the joke-displaying activity.
+*   Have the app display a loading indicator while the joke is being fetched from the server.
+*   Write a Gradle task that starts the GCE dev server, runs all the Android tests, and shuts down the dev server.
 
 ## Screenshots
 <img src="/screenshots/initial_screen.png" width="250"/> <img src="/screenshots/test_add_screen.png" width="250"/> 
