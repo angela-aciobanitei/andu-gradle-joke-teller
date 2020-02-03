@@ -1,5 +1,7 @@
 ## Gradle for Android and Java Final Project
 
+[![Codacy Badge](https://api.codacy.com/project/badge/Grade/6752bd0bc30a443bba238d1716655e2f)](https://app.codacy.com/manual/angela-aciobanitei/andu-gradle-joke-teller?utm_source=github.com&utm_medium=referral&utm_content=angela-aciobanitei/andu-gradle-joke-teller&utm_campaign=Badge_Grade_Settings)
+
 In this project, you will create an app with multiple flavors that uses
 multiple libraries and Google Cloud Endpoints. The finished app will consist
 of four modules. A Java library that provides jokes, a Google Cloud Endpoints
