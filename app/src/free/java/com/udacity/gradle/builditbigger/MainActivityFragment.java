@@ -5,7 +5,6 @@ import android.os.Bundle;
 import androidx.fragment.app.Fragment;
 
 import android.text.TextUtils;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -23,15 +22,14 @@ import java.util.Objects;
 
 public class MainActivityFragment extends Fragment implements JokeLoadedCallback {
 
-    // Required public empty constructor
-    public MainActivityFragment() {}
-
     private Button tellJokeButton;
     private ProgressBar loadingIndicator;
     private AdView adView;
     private InterstitialAd interstitialAd;
-
     private String joke;
+
+    // Required public empty constructor
+    public MainActivityFragment() {}
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,

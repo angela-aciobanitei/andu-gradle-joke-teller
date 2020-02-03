@@ -14,11 +14,11 @@ import com.ang.acb.displayjoke.DisplayJokeActivity;
 
 public class MainActivityFragment extends Fragment implements JokeLoadedCallback {
 
-    // Required public empty constructor
-    public MainActivityFragment() {}
-
     private Button tellJokeButton;
     private ProgressBar loadingIndicator;
+
+    // Required public empty constructor
+    public MainActivityFragment() {}
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
